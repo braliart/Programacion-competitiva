@@ -1,5 +1,9 @@
 ## Two sum
 This is a problem from leetcode: https://leetcode.com/problems/two-sum/description/
+
+### Two sum with arrays
+Solución por fuerza bruta. Recorrer un arreglo dos veces es como recorrer una matriz, por el tipo de problema se puede solo recorrer la parte superior de la matriz haciendolo con whiles, con lo que se reduce la complejidad de O(n^2) a O((n^2)/2).
+
 ``` Python
 class Solution(object):
     """
