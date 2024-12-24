@@ -6,12 +6,7 @@ You may assume that each input would have exactly one solution, and you may not 
 You can return the answer in any order.
 ![image](https://github.com/user-attachments/assets/d884b8ce-f6d8-476a-a79c-000ab0a9d2b8)
 
-Constraints:
-
-2 <= nums.length <= 104
--109 <= nums[i] <= 109
--109 <= target <= 109
-Only one valid answer exists.
+![image](https://github.com/user-attachments/assets/98b35c37-48ab-40b3-97a6-9ae5e964b494)
 
 Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 
