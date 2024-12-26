@@ -58,5 +58,53 @@ class Solution(object):
                 res = [i,dic[target-nums[i]]]
         return res
 ```
-            
+## Soluciones en C++
+
+Para practicar el lenguaje C++ se traducen ambas soluciones al lenguaje C++.
+
+### Con arreglos
+
+``` Python
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int i = 0;
+        int j = 1;
+        vector<int> res = {};
+
+        while(i<nums.size() and nums[i]+nums[j]!=target) {
+            while(j<nums.size() and nums[i]+nums[j]!=target) {
+                j++;
+            }
+            if(j==nums.size() and i<nums.size()) {
+                i++;
+                j = i+1;
+            }
+        }
+
+        return res = {i,j};
+    }
+};
+```
+### Con tablas de hash
+
+```Python
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        std::unordered_map<int,int> map;
+        std::vector<int> res = {};
+
+        for(int i=0; i<nums.size(); i++) {
+            map[nums[i]] = i;
+        }
+        for(int i=0; i<nums.size(); i++) {
+            if(map.find(target-nums[i]) != map.end() and map[target-nums[i]] != i) {
+                res = {i,map[target-nums[i]]};
+            }
+        }
+        return res;
+    }
+};
+```
             
