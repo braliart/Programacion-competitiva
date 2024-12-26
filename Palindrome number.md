@@ -39,7 +39,7 @@ class Solution(object):
         :rtype: bool
         """
         flag = False
-        y = str(x)[::-1]
+        y = str(x)[::-1] #Truco de slicing para invertir un string
         if str(x) == y:
             flag = True
         return flag
