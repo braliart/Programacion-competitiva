@@ -74,3 +74,33 @@ public:
     }
 };
 ```
+### Invertir el número
+
+Se hace utilizando la lógica de manejo de números decimales. Donde 121 = 100 + 20 + 1.
+
+```c++
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        bool flag = true;
+        if (x < 0) {
+            flag = false;
+        }
+
+        long long reversed = 0;
+        long long temp = x;
+
+        while (temp != 0) {
+            int digit = temp % 10;
+            reversed = reversed * 10 + digit;
+            temp /= 10;
+        }
+        cout<<reversed;
+
+        if (reversed != x) {
+            flag = false;
+        }
+        return flag;
+    }
+};
+```
