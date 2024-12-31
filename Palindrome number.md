@@ -44,3 +44,33 @@ class Solution(object):
             flag = True
         return flag
 ```
+## Solcuiones en C++
+Mismas soluciones, pero en c++.
+
+### Con char array
+Se complicó copiar el string al char array con strcpy, se debió usar un const para definir el tamaño del arreglo.
+
+```c++
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        std::string s = std::to_string(x);
+        bool flag = true;
+        const int n = s.size();
+        int begin = 0;
+        int end = n-1;
+        char arr[n + 1];
+        std::strcpy(arr, s.c_str());
+        
+        while(flag and begin<end) {
+            if(arr[begin] != arr[end]){
+                flag = false;
+            }
+            begin++;
+            end--;
+        }
+
+        return flag;
+    }
+};
+```
