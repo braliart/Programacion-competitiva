@@ -30,3 +30,4 @@ class Solution(object):
 
         return res
 ```
+In leetcode solutions I found a better implementation of the intuition that I had: https://leetcode.com/problems/roman-to-integer/solutions/3651672/best-method-c-java-python-beginner-friendly/
