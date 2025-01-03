@@ -31,3 +31,34 @@ class Solution(object):
         return res
 ```
 In leetcode solutions I found a better implementation of the intuition that I had: https://leetcode.com/problems/roman-to-integer/solutions/3651672/best-method-c-java-python-beginner-friendly/
+
+## Versión en C++ con hasmaps, maneja el stringo como arreglo de chars
+
+```c++
+class Solution {
+public:
+    int romanToInt(string s) {
+        std::unordered_map<char,int> map;
+        int res = 0;
+
+        map['M'] = 1000;
+        map['D'] = 500;
+        map['C'] = 100;
+        map['L'] = 50;
+        map['X'] = 10;
+        map['V'] = 5;
+        map['I'] = 1;
+
+        for(int i=0; i<s.length()+1; i++) {
+            if(i+1<s.length()+1 and map[s[i]]<map[s[i+1]]) {
+                res -= map[s[i]];
+            } else {
+                res += map[s[i]];
+            }
+        }
+
+        return res;
+    }
+};
+```
+
