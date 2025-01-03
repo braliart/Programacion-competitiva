@@ -32,6 +32,18 @@ class Solution(object):
 ```
 In leetcode solutions I found a better implementation of the intuition that I had, heres the link tho I implemented it in c++ below: https://leetcode.com/problems/roman-to-integer/solutions/3651672/best-method-c-java-python-beginner-friendly/
 
+Anotherway is to change the numbers of the substraction to always have addition operations:
+
+```Python
+number = 0
+        s = s.replace("IV", "IIII").replace("IX", "VIIII")
+        s = s.replace("XL", "XXXX").replace("XC", "LXXXX")
+        s = s.replace("CD", "CCCC").replace("CM", "DCCCC")
+        for char in s:
+            number += translations[char]
+        return number
+```
+
 ## C++ version with hashmaps plus using the string as a char array
 This is the reifined solution of mine in python but in c++.
 
@@ -62,4 +74,3 @@ public:
     }
 };
 ```
-
