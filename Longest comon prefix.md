@@ -1,8 +1,9 @@
 # Longest common prefix
 
-Problema: 
+Problem: https://leetcode.com/problems/longest-common-prefix/
 
 ## Python
+### Array solution
 O(n^2) Complexity.
 1. The array is sorted so the word with the longest common prefix is the first one.
 2. The first element of the array is compared substring by substring (via slicing and the method startswith()) with all the other elements until the prefix is found, once it is the flag pops and it breaks the loop.
