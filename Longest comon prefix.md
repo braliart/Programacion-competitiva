@@ -32,19 +32,7 @@ class Solution(object):
 ```
 ### Trie solution
 A Trie is a Tree made of the letters of the alphabet so in encapsules all of the words in the given strings. Example:
-Input: If Trie is      root
-                    /   \    \
-                    t   a     b
-                    |   |     |
-                    h   n     y
-                    |   |  \  |
-                    e   s  y  e
-                 /  |   |
-                 i  r   w
-                 |  |   |
-                 r  e   e
-                        |
-                        r
+![image](https://github.com/user-attachments/assets/9a7042aa-4c27-4193-aedc-1141a63d8629)
 Output: Contents of Trie: answer, any, bye, their, there 
 1. We first implement the Trie class with just a method to add words.
 2. Then add the words to the Trie and look for the shortest word.
