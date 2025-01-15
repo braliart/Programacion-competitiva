@@ -31,7 +31,7 @@ class Solution(object):
         return res
 ```
 ### Trie solution
-A Trie is a Tree made of the letters of the alphabet so in encapsules all of the words in the given strings. Example:
+A Trie is a Tree made of the letters of the alphabet so in encapsules all of the words in the given strings. It is implemented with nested dicts, example:
 ![image](https://github.com/user-attachments/assets/9a7042aa-4c27-4193-aedc-1141a63d8629)
 
 Output: Contents of Trie: answer, any, bye, their, there 
