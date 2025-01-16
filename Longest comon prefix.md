@@ -9,8 +9,8 @@ O(n) Complexity. Beats 100%
 2. Comparing it with the last gives the longest common prefix since it is sorted.
 ```Python
 class Solution(object):
-    :type strs: List[str]
-    :rtype: str
+    #:type strs: List[str]
+    #:rtype: str
     def longestCommonPrefix(self, strs):
         strs.sort()
         c=0
