@@ -20,7 +20,9 @@ class Solution(object):
         return strs[0][:c]
 ```
 ### Trie solution
+It beats only 40%, the other way is op, but I did dis to practice Tries.
 A Trie is a Tree made of the letters of the alphabet so in encapsules all of the words in the given strings. It is implemented with nested dicts, example:
+
 ![image](https://github.com/user-attachments/assets/9a7042aa-4c27-4193-aedc-1141a63d8629)
 
 Output: Contents of Trie: answer, any, bye, their, there 
