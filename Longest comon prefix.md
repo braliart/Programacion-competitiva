@@ -3,32 +3,21 @@
 Problem: https://leetcode.com/problems/longest-common-prefix/
 
 ## Python
-### Sort array and startswith() solution
-O(n^2) Complexity. Beats 100%
-1. The array is sorted so the word with the longest common prefix is the first one.
-2. The first element of the array is compared substring by substring (via slicing and the method startswith()) with all the other elements until the prefix is found, once it is the flag pops and it breaks the loop.
+### Sort array, compare extremes
+O(n) Complexity. Beats 100%
+1. The array is sorted so the word with the longest common prefix.
+2. Comparing it with the last gives the longest common prefix since it is sorted.
 ```Python
 class Solution(object):
+    :type strs: List[str]
+    :rtype: str
     def longestCommonPrefix(self, strs):
-        """
-        :type strs: List[str]
-        :rtype: str
-        """
         strs.sort()
         c=0
-        flag1 = True
-        res = ""
-
-        while flag1 and c<len(strs[0]):
-            for i in range(0,len(strs)):
-                temp = strs[0][:c+1]
-                if not strs[i].startswith(temp):
-                    flag1 = False
-            if flag1:
-                res = temp
+        while c<len(strs[0]) and strs[0][c] == strs[len(strs)-1][c]:
             c+=1
                 
-        return res
+        return strs[0][:c]
 ```
 ### Trie solution
 A Trie is a Tree made of the letters of the alphabet so in encapsules all of the words in the given strings. It is implemented with nested dicts, example:
