@@ -48,11 +48,9 @@ class Trie():
             curr = curr.children[i]
 
 class Solution(object):
+    #:type strs: List[str]
+    #:rtype: str
     def longestCommonPrefix(self, strs):
-        """
-        :type strs: List[str]
-        :rtype: str
-        """
         trie = Trie()
         curr = trie.root
         res = ""
