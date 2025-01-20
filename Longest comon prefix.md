@@ -72,8 +72,8 @@ class Solution(object):
         return res
 ```
 ## C++
-## Sort array, compare extremes
-Exactly the same as the Python solution, but forums mention an `#include <bits/stdc++.h>` for it to work, but leetcode didn´t needed it.
+### Sort array, compare extremes
+Exactly the same as the Python solution, but forums mention an `#include <bits/stdc++.h>` for it to work, but leetcode didn´t needed it. It beats 100% as well.
 ```C++
 class Solution {
 public:
