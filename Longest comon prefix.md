@@ -71,3 +71,22 @@ class Solution(object):
 
         return res
 ```
+## C++
+## Sort array, compare extremes
+Exactly the same as the Python solution, but forums mention an `#include <bits/stdc++.h>` for it to work, but leetcode didn´t needed it.
+```C++
+class Solution {
+public:
+    string longestCommonPrefix(vector<string>& strs) {
+        int c = 0;
+        std::string res = "";
+        sort(strs.begin(),strs.end());
+
+        while(c<strs[0].size() and strs[0][c] == strs[strs.size()-1][c]) {
+            c++;
+        }
+
+        return strs[0].substr(0,c);
+    }
+};
+```
