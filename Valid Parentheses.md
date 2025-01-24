@@ -3,6 +3,7 @@ Problema: https://leetcode.com/problems/valid-parentheses/description/
 ## Python
 ### Stack solution
 **Time Complexity:** *O(n)*, where n is the length of the string. Each character is processed once.
+
 **Space Complexity:** *O(n)*, as the stack may store all the characters in the worst case (e.g., all opening brackets).
 1. We do a dict where the keys are the front parentheses and the values are the back parentheses, a stack to operate and a flag to check if it is valid.
 2. We do a global while to advance within the chars of the string.
