@@ -1,5 +1,5 @@
 # Remove element
-Problem:
+Problem: https://leetcode.com/problems/remove-element/
 
 ## Python
 **Time Complexity:** *O(n)*, where n is the length of the array.
