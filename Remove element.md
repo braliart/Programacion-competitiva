@@ -21,7 +21,6 @@ class Solution(object):
     #:type val: int
     #:rtype: int
     def removeElement(self, nums, val):
-        flag = True
         k=0
         p2 = -1 #pointer 2
         l = len(nums)
