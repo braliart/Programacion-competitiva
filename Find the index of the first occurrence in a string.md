@@ -6,6 +6,7 @@ We set the length of needle and start traveling haystack until we found it.
 1. Set two pointers: one will start at cero, the other will start at `len(0)`.
 2. Increase the pointers until we find the first occurrence.
 3. If the second pointer reach the end of the string there is no occurrence.
+   
 **Time Complexity:** *O(n)*, where n is the length of the s.
 
 **Space Complexity:** *O(n)*, as we use anly the given array and some variables.
