@@ -29,3 +29,23 @@ class Solution(object):
 
         return p1
 ```
+## C++
+Same implementation, no significant difference.
+```python
+class Solution {
+public:
+    int searchInsert(vector<int>& nums, int target) {
+        int p1 = 0, p2 = nums.size()/2;
+
+        if(target >= nums[p2]) {
+            p1 = p2;
+            p2 = nums.size();
+        }
+        while(p1<p2 && nums[p1]<target) {
+            p1++;
+        }
+
+        return p1;
+    }
+};
+```
