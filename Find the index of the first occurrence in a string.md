@@ -9,7 +9,7 @@ We set the length of needle and start traveling haystack until we found it.
    
 **Time Complexity:** *O(n)*, where n is the length of the s.
 
-**Space Complexity:** *O(n)*, as we use anly the given array and some variables.
+**Space Complexity:** *O(n)*, as we use only the given array and some variables.
 ```python []
 class Solution(object):
     #:type haystack: str
@@ -28,21 +28,20 @@ class Solution(object):
 ```
 ## C++
 Same solution in c++ but only uses one pointer and the length of needle since it uses substr() method instead of python´s slicing.
+
+*¿Why try catch?* if not I had to do multiple if´s and all exception can be catched if the substr() method fails. *Learnings*: catch(...) is used to catch any exception without setting a parameter.
 ```c++
 class Solution {
 public:
     int strStr(string haystack, string needle) {
         int c = 0;
         
-        if(needle.length()>haystack.length()) {
-            c = -1;
-        } else {
-            while(c <= haystack.length()-needle.length() && needle != haystack.substr(c,needle.length())) {
+        try {
+            while(needle != haystack.substr(c,needle.length())) {
                 c++;
             }
-            if(c > haystack.length()-needle.length()) {
-                c = -1;
-            }
+        } catch(...) {
+            c = -1;
         }
         return c;
     }
