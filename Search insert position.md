@@ -1,5 +1,5 @@
 # Search insert position
-Problem:
+Problem: https://leetcode.com/problems/search-insert-position/
 ## Python
 It is programing the binary search with two pointers.
 
@@ -9,6 +9,9 @@ It is programing the binary search with two pointers.
 4. We increase p1 until find target or getting to p2.
 5. Return p1.
 
+**Time Complexity:** *O(log n)*, where n is the length of the array.
+
+**Space Complexity:** *O(n)*, as we use only the given array and some variables.
 ```python
 class Solution(object):
     #:type nums: List[int]
