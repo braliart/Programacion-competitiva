@@ -3,7 +3,7 @@ Problem: https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in
 ## Python
 We set the length of needle and start traveling haystack until we found it.
 
-1. Set two pointers: one will start at cero, the other will start at `len(0)`.
+1. Set two pointers: one will start at cero, the other will start at `len(needle)`.
 2. Increase the pointers until we find the first occurrence.
 3. If the second pointer reach the end of the string there is no occurrence.
    
@@ -16,19 +16,35 @@ class Solution(object):
     #:type needle: str
     #:rtype: int
     def strStr(self, haystack, needle):
-        flag = True
-        k = len(needle)
-        l = len(haystack)
-        c = 0
+        p1 = 0
+        p2 = len(needle)
 
-        while flag and k<=l:
-            if haystack[c:k] == needle:
-                flag = False
-            else:
-                c+=1
-                k+=1
-        if k>l:
-            c = -1
+        while p2 <= len(haystack) and haystack[p1:p2] != needle:
+            p1+=1
+            p2+=1
+        if p2 > len(haystack):
+            p1 = -1
+        return p1 
+```
+## C++
+Same solution in c++ but only uses one pointer and the length of needle since it uses substr() method instead of python´s slicing.
+```c++
+class Solution {
+public:
+    int strStr(string haystack, string needle) {
+        int c = 0;
         
-        return c
+        if(needle.length()>haystack.length()) {
+            c = -1;
+        } else {
+            while(c <= haystack.length()-needle.length() && needle != haystack.substr(c,needle.length())) {
+                c++;
+            }
+            if(c > haystack.length()-needle.length()) {
+                c = -1;
+            }
+        }
+        return c;
+    }
+};
 ```
