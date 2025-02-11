@@ -7,7 +7,7 @@ We set the length of needle and start traveling haystack until we found it.
 2. Increase the pointers until we find the first occurrence.
 3. If the second pointer reach the end of the string there is no occurrence.
    
-**Time Complexity:** *O(n)*, where n is the length of the s.
+**Time Complexity:** *O(n)*, where n is the length of the string.
 
 **Space Complexity:** *O(n)*, as we use only the given array and some variables.
 ```python []
@@ -27,9 +27,10 @@ class Solution(object):
         return p1 
 ```
 ## C++
-Same solution in c++ but only uses one pointer and the length of needle since it uses substr() method instead of python´s slicing.
+Beats 100%
+Same solution in c++ but only uses one pointer and the length of needle since it uses substr() method instead of python´s slicing. It uses try catch instead of manually checking in the while.
 
-*¿Why try catch?* if not I had to do multiple if´s and all exception can be catched if the substr() method fails. *Learnings*: catch(...) is used to catch any exception without setting a parameter.
+*¿Why try catch?* if not I had to do multiple if´s and all exception can be catched if the substr() method fails. It gets the code cleaner and since exceptions are rare it doesnt impact too much on time performance, yet it affects space performance. *Learnings*: catch(...) is used to catch any exception without setting a parameter.
 ```c++
 class Solution {
 public:
